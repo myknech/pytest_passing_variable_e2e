@@ -7,6 +7,6 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture(scope="module")
-def baseurl(request):
+@pytest.fixture()
+def conf_baseurl(request):
     return request.config.getoption("--baseurl")
